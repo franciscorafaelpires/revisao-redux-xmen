@@ -24,8 +24,8 @@ class LoginForm extends React.Component {
   validateButton = () => {
     const minLength = 3;
     const { inputUserName } = this.state;
-    const validation = inputUserName.length > minLength;
-    return validation;
+    const valid = inputUserName.length > minLength;
+    return valid;
   };
 
   render() {
