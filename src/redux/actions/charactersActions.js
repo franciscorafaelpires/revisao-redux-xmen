@@ -18,9 +18,9 @@ export const fetchAPI = () => async (dispatch) => {
   dispatch(charactersActions());
   try {
     const response = await fetchCharacters();
-    if (!response) throw new Error('Something went wrong');
+    if (!response) throw new Error('Algo de errado não está certo');
     dispatch(saveCharactersAction(response));
   } catch (error) {
-    dispatch(failedRequestAction(error.massage));
+    dispatch(failedRequestAction(error.message));
   }
 };
